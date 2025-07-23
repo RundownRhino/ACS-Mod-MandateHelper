@@ -5,3 +5,6 @@ A mod for Amazing Cultivation simulator that improves the [Manifesting Mandate](
 ![YT-DLP](readme/example1.png)
 Example. Blue numbers indicate ≥100% matches.
 </div>
+
+## Compiling
+If you want to compile this mod from source, make a symlink named `game` to the game's directory, so that the paths in MandateHelper.csproj are right. You may also need to modify the path to 0Harmony.dll - I use the one from ModLoaderLite. After that, it should build correctly with just `dotnet build` and deposit the mod into `bin/`.
