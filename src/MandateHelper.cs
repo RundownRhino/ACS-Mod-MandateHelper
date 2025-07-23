@@ -49,7 +49,7 @@ public class MandateHelper {
             Info(acceptChoice.OKResult);
             // It's easier to inject my own function than to figure out whether this can be done from the API.
             AddCodeToStart(ref acceptChoice.OKResult, $"""
-            GameMain:GetMod("{nameof(MandateHelper)}").{nameof(MandateHookFor)}("{law}");
+            CS.{nameof(MandateHelper)}.{nameof(MandateHelper)}.{nameof(MandateHookFor)}("{law}")
             """);
             Info("After:");
             Info(acceptChoice.OKResult);
