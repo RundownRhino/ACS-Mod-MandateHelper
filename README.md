@@ -3,6 +3,7 @@ A mod for Amazing Cultivation simulator that improves the [Manifesting Mandate](
 <div align="center">
 
 ![YT-DLP](readme/example1.png)
+
 Example. Blue numbers indicate ≥100% matches.
 </div>
 
