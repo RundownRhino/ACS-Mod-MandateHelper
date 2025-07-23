@@ -49,4 +49,9 @@ public static class Utils {
     public static void AddStoryMsg(string format, params object[] args) {
         GameDefine.AddTempDescLine(GameDefine.GetFixedStory(null, string.Format(format, args)));
     }
+
+    // Color should be e.g. "FF0000", which wraps with [color=#FF0000]
+    public static string WrapColor(string text, string color) {
+        return $"[color=#{color}]{text}[/color]";
+    }
 }
