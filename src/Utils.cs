@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Text.RegularExpressions;
+using XiaWorld;
 
 namespace MandateHelper;
 public static class Utils {
@@ -44,5 +45,8 @@ public static class Utils {
     }
     public static void AddCodeToStart(ref string to, string code) {
         AddCodeTo(ref to, code, end: false);
+    }
+    public static void AddStoryMsg(string format, params object[] args) {
+        GameDefine.AddTempDescLine(GameDefine.GetFixedStory(null, string.Format(format, args)));
     }
 }
