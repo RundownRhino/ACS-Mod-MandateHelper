@@ -17,13 +17,14 @@ public class MandateHelper {
         KLog.Warn($"[{nameof(MandateHelper)}] {fmt}", args);
     }
 
-    public static Regex LawMatchRegex = new(@"GetMatchingWithGong\(['""](.+?)['""]\)");
+    static readonly Regex ManifestingMandateRegex = new(@"^Secrets_Gong\d+");
+    static readonly Regex LawMatchRegex = new(@"GetMatchingWithGong\(['""](.+?)['""]\)");
     public static void PatchStories() {
         var m_mapStories = Traverse.Create(typeof(MapStoryMgr)).Field("m_mapStories").GetValue<Dictionary<string, MapStoryDef>>();
         foreach (var kv in m_mapStories) {
             var sdef = kv.Value;
             var sname = sdef.Name;
-            if (!sname.StartsWith("Secrets_Gong")) {
+            if (!ManifestingMandateRegex.IsMatch(sname)) {
                 continue;
             }
             Info("Patching mandate story '{0}'", sname);
