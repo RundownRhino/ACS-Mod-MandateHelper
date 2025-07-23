@@ -1,0 +1,7 @@
+# MandateHelper
+A mod for Amazing Cultivation simulator that improves the [Manifesting Mandate](<https://amazing-cultivation-simulator.fandom.com/wiki/Manifesting_Mandate>) event. Shows the Law Match of the cultivator when doing Accept Teachings, and also shows the top Law Matches among other disciples.
+<div align="center">
+
+![YT-DLP](readme/example1.png)
+Example. Blue numbers indicate ≥100% matches.
+</div>
